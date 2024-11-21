@@ -47,7 +47,8 @@ input {
     color: white;
 }
 
-p {
+.characters {
+    display: flex;
     align-self: flex-end;
     color: gray;
 }
