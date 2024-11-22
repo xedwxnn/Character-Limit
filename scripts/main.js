@@ -2,7 +2,7 @@ const inputEl = document.getElementById('input');
 let currentCharEl = document.getElementById('currentChar');
 const maxCharEl = document.getElementById('maxChar');
 
-maxCharEl.innerText = String(5).padStart(2, '0');
+maxCharEl.innerText = String(60).padStart(2, '0');
 
 function charactersCounter() {
     let inputValue = inputEl.value.length;
@@ -12,20 +12,25 @@ function charactersCounter() {
 
 function validateCounter(inputValue) {
     const maxChars = parseInt(maxCharEl.innerText, 10);
+    
+    inputEl.removeEventListener("keydown", preventInput);
+    
     if (inputValue >= maxChars) {
         inputEl.style.border = '1px solid red';
         currentCharEl.style.color = 'red';
         maxCharEl.style.color = 'red';
 
-        inputValue = maxCharEl;
-    }
-    
-    else {
+        inputEl.addEventListener("keydown", preventInput);
+    } else {
         inputEl.style.border = '';
         currentCharEl.style.color = '';
         maxCharEl.style.color = '';
+    }
+}
 
-        inputValue = currentCharEl;
+function preventInput(event) {
+    if (event.key !== 'Backspace' && event.key !== 'Delete') {
+        event.preventDefault();
     }
 }
 
