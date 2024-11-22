@@ -27,28 +27,32 @@ body {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
-    padding: 40px 25px;
+    padding: 30px 25px;
     border-radius: 6px;
     box-shadow: 0px 0px 5px;
 }
 
-input {
+#input {
     width: 100%;
     height: 70%;
-    min-height: 140px;
+    min-height: 120px;
     margin: 10px 0;
     border-radius: 6px;
-    border: none;border: 1px solid rgba(255, 255, 255, 0.25);
+    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.25);
     outline: none;
     font-size: 16px;
     box-sizing: border-box;
-    padding: 0px 10px;
+    padding: 10px 10px 0px 10px;
     background-color: rgba(0, 0, 0, 0.4);
     color: white;
+    transition: .3s;
+    resize: none;
 }
 
 .characters {
     display: flex;
     align-self: flex-end;
     color: gray;
+    transition: .3s;
 }
