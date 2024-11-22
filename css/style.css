@@ -50,6 +50,14 @@ body {
     resize: none;
 }
 
+#input:hover {
+    border: 1px solid rgba(255, 255, 255, 0.50);
+}
+
+#input:focus {
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
 .characters {
     display: flex;
     align-self: flex-end;
